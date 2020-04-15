@@ -1,0 +1,61 @@
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// default screen sizes
+$desktop: 840px;
+$mobile: 523px;
+
+
+#carousel-example-2{
+  margin-top: 2rem;
+  @include mobile{
+    margin-top: 4rem !important;
+    padding-top: 4rem;
+
+  }
+  img{
+    max-height: 80vh;
+  }
+  @include mobile{
+
+    .btn{
+      font-size: .4rem !important;
+      padding: .2rem;
+
+    }
+  }
+}
+
+.carousel-caption{
+  background: rgba(128, 128, 128, 0.363);
+  height: 100%;
+  width: 50%;
+  left: 0;
+  top: 0;
+  @include mobile{
+    h6{
+      font-size: 1rem!important;
+    }
+    p{
+      font-size: .6rem!important;
+    }
+  }
+  // transform: translateX();
+}
+.carousel-indicators{
+  width: 25%;
+  left: 0;
+}
+
+.carousel-control-next{
+  width: 80%;
+  left: 0;
+}

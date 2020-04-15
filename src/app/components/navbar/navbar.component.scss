@@ -1,0 +1,28 @@
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// default screen sizes
+$desktop: 840px;
+$mobile: 523px;
+
+
+#main_nav{
+  border-top: 3px solid red;
+  font-family: "Oxygen", sans-serif !important;
+
+  img{
+    max-height: 3rem;
+    @include mobile{
+      max-height: 1.7rem;
+    }
+  }
+
+}

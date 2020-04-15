@@ -1,0 +1,37 @@
+.program-title{
+  font-weight: 700;
+}
+
+.program-intro{
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: gold;
+  text-shadow: 1px 1px #558abb;
+}
+
+.program-img-left{
+
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 15rem;
+  border-bottom-left-radius: 2rem;
+  // border-bottom-right-radius: 1rem;
+  min-height: 20rem;
+  margin: 3rem;
+
+}
+.program-img-right{
+
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 15rem;
+  min-height: 20rem;
+  margin: 3rem;
+
+}
+
+#education{
+  background: url("/assets/img/education.jpg")no-repeat center center/cover ;
+}
+#murimi{
+  background: url("/assets/img/education.jpg")no-repeat center center/cover ;
+}

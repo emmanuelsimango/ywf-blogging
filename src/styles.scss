@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat|Oxygen&display=swap");
+html,
+body {
+  animation: 2s ease-in-out 0s 1 slideInFromLeft;
+  scroll-behavior: smooth;
+  // font-family: "Oxygen Mono", monospace;
+  font-family: 'Poppins', sans-serif;
+  color: grey;
+
+}
+
+.spinner-border{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
+}
+
+.golden-text{
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: gold;
+  text-shadow: 1px 1px #558abb;
+}
+
+h1,h2,h3{
+  span{
+    border-bottom: 3px solid red;
+    color: red !important;
+  }
+}
+.text-shadow{
+  text-shadow: 2px 1px #558abb;
+}

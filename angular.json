@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ywf-blogging": {
@@ -28,9 +28,17 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/mdbootstrap/css/bootstrap.min.css",
+              "./node_modules/mdbootstrap/css/mdb.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/mdbootstrap/js/jquery.min.js",
+              "./node_modules/mdbootstrap/js/popper.min.js",
+              "./node_modules/mdbootstrap/js/bootstrap.min.js",
+              "./node_modules/mdbootstrap/js/mdb.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +131,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ywf-blogging"
+    }
+  },
+  "defaultProject": "ywf-blogging",
+  "cli": {
+    "analytics": false
+  }
 }
