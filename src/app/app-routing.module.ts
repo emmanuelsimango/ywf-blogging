@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProgramsComponent } from './pages/programs/programs.component';
 import { PathFindersComponent } from './pages/path-finders/path-finders.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 
 const routes: Routes = [
@@ -10,6 +11,15 @@ const routes: Routes = [
   {path:'home',component: HomeComponent},
   {path:'programs',component: ProgramsComponent},
   {path:'finders',component: PathFindersComponent},
+  {
+    path:'blog',
+    component: BlogComponent,
+  },
+  {
+    path:'admin',
+    loadChildren: () => import('./pages/admin/admin.module')
+      .then(m => m.AdminModule),
+  }
 ];
 
 @NgModule({

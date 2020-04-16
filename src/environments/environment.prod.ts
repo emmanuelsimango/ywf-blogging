@@ -8,5 +8,5 @@ export const environment = {
     storageBucket: "youthwisdom.appspot.com",
     messagingSenderId: "638915494655",
     appId: "1:638915494655:web:333cb7abb8fa8e556c42ca"
-  };
+  },
 };
