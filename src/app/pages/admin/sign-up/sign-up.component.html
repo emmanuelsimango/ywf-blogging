@@ -1,46 +1,37 @@
-<section class="py-5">
-    <div class="container">
-      <!-- Testing shiiiit yangu -->
-      <div>
+<section class="py-5 d-flex justify-content-center align-items-centergit ">
+
+
+  <!-- Default form login -->
+<form class="col-sm-10 col-md-5 text-center border border-light p-5" action="#!">
+
+  <h3 class="font-weight-bold">Sign <span> UP</span></h3>
+  <p class="golden-text" >
+    Continue by creating a new account
+  </p>
+  <!-- Email -->
+  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Email address"  #userEmail required>
+
+  <!-- Password -->
+  <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"  #userPwd required>
+
+  <!-- Sign in button -->
+  <button class="btn btn-dark btn-block my-4" type="button"  (click)="authService.SignUp(userEmail.value, userPwd.value)">Sign up</button>
+
+  <button  class="btn btn-danger btn-block"  (click)="authService.GoogleAuth()"><i class="fa fa-google "></i> oogle </button>
+
+  <!-- Register -->
+  <p>Already have an account?
+    <a routerLink="/admin">Login</a>
+  </p>
+
+
+    <div class="d-flex justify-content-around">
         <div>
-      
-          <div>
-            <h3>Sign Up</h3>
-      
-            <div>
-              <input type="email" placeholder="Email Address" #userEmail required>
-            </div>
-      
-            <div>
-              <input type="password" placeholder="Password" #userPwd required>
-            </div>
-      
-            <div>
-              <input type="button" class="btn btn-primary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
-            </div>
-      
-            <div>
-              <span ><span>Or</span></span>
-            </div>
-      
-            <!-- Continue with Google -->
-            <div>
-              <button type="button" class="btn google-btn" (click)="authService.GoogleAuth()">
-                <i class="fab fa-google-plus-g"></i>
-                Continue with Google
-              </button>
-            </div>
-      
-            
-          </div>
-      
-          <div class="redirectToLogin">
-            <span>Already have an account? <a class="redirect" routerLink="/admin">Log In</a></span>
-          </div>
+            <!-- Forgot password -->
+            <a routerLink="/admin/forgot-password">Forgot password?</a>
         </div>
-      
-      </div>
-      <!-- Ended here to test the shiit -->
     </div>
+  </form>
+<!-- Default form login -->
+
 </section>
-  
