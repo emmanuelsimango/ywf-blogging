@@ -26,4 +26,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }
