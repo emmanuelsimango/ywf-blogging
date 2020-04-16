@@ -1,1 +1,48 @@
-<p>login works!</p>
+<section class="py-5">
+    <div class="container">
+      <!-- Testing shiiiit yangu -->
+      <div>
+        <div>
+      
+          <div>
+            <h3>Sign In</h3>
+            <div>
+              <input type="text" class="formControl" placeholder="Username" #userName required>
+            </div>
+      
+            <div>
+              <input type="password" class="formControl" placeholder="Password" #userPassword required>
+            </div>
+      
+            <!-- Calling SignIn Api from AuthService -->
+            <div>
+              <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+            </div>
+      
+            <div>
+              <span><span>Or</span></span>
+            </div>
+      
+            <!-- Calling GoogleAuth Api from AuthService -->
+            <div>
+              <button type="button" class="btn" (click)="authService.GoogleAuth()">
+                <i class="fab fa-google-plus-g"></i>
+                Log in with Google
+              </button>
+            </div>
+      
+            <div>
+              <a routerLink="/admin/forgot-password">Forgot Password?</a>
+            </div>
+          </div>
+      
+          <div>
+            <span>Don't have an account?<a routerLink="/admin/register"> Sign Up</a></span>
+          </div>
+      
+        </div>
+      </div>
+      <!-- Ended here to test the shiit -->
+    </div>
+  </section>
+  

@@ -1,0 +1,46 @@
+<section class="py-5">
+    <div class="container">
+      <!-- Testing shiiiit yangu -->
+      <div>
+        <div>
+      
+          <div>
+            <h3>Sign Up</h3>
+      
+            <div>
+              <input type="email" placeholder="Email Address" #userEmail required>
+            </div>
+      
+            <div>
+              <input type="password" class="formControl" placeholder="Password" #userPwd required>
+            </div>
+      
+            <div>
+              <input type="button" class="btn btn-primary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+            </div>
+      
+            <div>
+              <span ><span>Or</span></span>
+            </div>
+      
+            <!-- Continue with Google -->
+            <div>
+              <button type="button" class="btn google-btn" (click)="authService.GoogleAuth()">
+                <i class="fab fa-google-plus-g"></i>
+                Continue with Google
+              </button>
+            </div>
+      
+            
+          </div>
+      
+          <div class="redirectToLogin">
+            <span>Already have an account? <a class="redirect" routerLink="/admin">Log In</a></span>
+          </div>
+        </div>
+      
+      </div>
+      <!-- Ended here to test the shiit -->
+    </div>
+</section>
+  
