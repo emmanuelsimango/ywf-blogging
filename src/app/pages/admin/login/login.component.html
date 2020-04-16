@@ -7,16 +7,16 @@
           <div>
             <h3>Sign In</h3>
             <div>
-              <input type="text" class="formControl" placeholder="Username" #userName required>
+              <input type="text" placeholder="Username" #userName required>
             </div>
       
             <div>
-              <input type="password" class="formControl" placeholder="Password" #userPassword required>
+              <input type="password" placeholder="Password" #userPassword required>
             </div>
       
             <!-- Calling SignIn Api from AuthService -->
             <div>
-              <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+              <input type="button" class="btn btn-primary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
             </div>
       
             <div>
