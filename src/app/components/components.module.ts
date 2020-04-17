@@ -8,16 +8,17 @@ import { FooterComponent } from './footer/footer.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ImgTopComponent } from './img-top/img-top.component';
 import { HeaderComponent } from './header/header.component';
+import { PartnersComponent } from './partners/partners.component';
 
 
 @NgModule({
-  declarations: [NavbarComponent, SliderComponent, EventsComponent, ContactComponent, FooterComponent, ImgTopComponent, HeaderComponent],
+  declarations: [NavbarComponent, SliderComponent, EventsComponent, ContactComponent, FooterComponent, ImgTopComponent, HeaderComponent, PartnersComponent],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports:[
-    NavbarComponent,SliderComponent,EventsComponent,ContactComponent,FooterComponent,ImgTopComponent,HeaderComponent
+    NavbarComponent,SliderComponent,EventsComponent,ContactComponent,FooterComponent,ImgTopComponent,HeaderComponent,PartnersComponent
   ]
 })
 export class ComponentsModule { }

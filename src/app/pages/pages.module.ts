@@ -14,6 +14,7 @@ import { BlogOneComponent } from './blog-one/blog-one.component';
   imports: [
     CommonModule,
     ComponentsModule,
+    
   ],
   exports: [
     HomeComponent
