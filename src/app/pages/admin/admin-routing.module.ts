@@ -5,6 +5,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AdminBlogComponent } from './admin-blog/admin-blog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from 'src/app/service/security/auth.guard';
 
 
 const routes: Routes = [
@@ -27,10 +28,12 @@ const routes: Routes = [
   {
     path: 'admin-blog',
     component: AdminBlogComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

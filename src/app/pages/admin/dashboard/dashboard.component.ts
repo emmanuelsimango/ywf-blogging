@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from 'src/app/service/blog.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  count=0;
+  constructor(private blogs:BlogService) {
+    blogs.getAllBlogs().subscribe(wow=>{
+      console.log(wow.length);
+      console.log(wow);
+      
+    })
+   }
 
   ngOnInit(): void {
   }

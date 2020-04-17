@@ -6,7 +6,7 @@
                 blog works!
             </p>
         </div>
-        <div class="row py-5">
+        <div class="row py-5" *ngFor="let item of allBlogs; let i=index">
             <div class="col-sm-12 col-md-3">
             <img src="assets/img/avatas/pp.jfif" class="img rounded-circle img-thumbnail img-fluid border-danger" style="max-height: 10rem;"
             alt="">
@@ -16,7 +16,7 @@
                 Ronald <span> Murerekwa</span>
             </h3>
             <p class="text-dark">
-                Ronald Murerekwa is a brand promoter who is behind the creation of Youth Wisdom Foundation (YWF) and also a passionate permaculturist. Having worked with various brands he has been exposed to the elite and the vulnerable populations including victims of early childhood pregnancies and marriages and also less privileged youths. Ronald and other youths found it necessary to uplift them through counselling, mentorship, provision of life-skills and volunteered their time to provide them with education and Sexual Reproductive Health and Human Rights Issues (SRHR).
+                {{item.payload.doc.data().content}}
             </p>
             </div>
         </div>

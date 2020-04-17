@@ -37,7 +37,7 @@ export class AuthService {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['/admin/dashboard']);
         });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -91,9 +91,12 @@ export class AuthService {
   AuthLogin(provider) {
     return this.afAuth.signInWithPopup(provider)
     .then((result) => {
-       this.ngZone.run(() => {
-          this.router.navigate(['admin/dashboard']);
-        })
+      this.router.navigate(['/admin/dashboard']);
+      //console.log("Duzvi");
+      
+      //  this.ngZone.run(() => {
+      //     this.router.navigate(['/admin/dashboard']);
+      //   })
       this.SetUserData(result.user);
     }).catch((error) => {
       window.alert(error)
@@ -121,7 +124,7 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['admin']);
     })
   }
 
