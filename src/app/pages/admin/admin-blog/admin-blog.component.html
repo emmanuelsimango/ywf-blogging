@@ -22,8 +22,8 @@
                   <td>{{item.payload.doc.data().content}}</td>
                   <td>{{item.payload.doc.data().comments.length}}</td>
                   <td>
-                      <button>View</button>
-                      <button>Delete</button>
+                      <button (click)="edit(item)">Edit</button>
+                      <button (click)="delete(item)">Delete</button>
                   </td>
               </tr>
           </tbody>

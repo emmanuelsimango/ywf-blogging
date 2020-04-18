@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { DocumentReference, DocumentChangeAction } from '@angular/fire/firestore/interfaces';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class BlogService {
 
   private collectionName:string = 'blog-posts';
-  public selectedBlog:Observable<any> = new Observable(null);
+  public selectedBlog:BehaviorSubject<any> = new BehaviorSubject(null);
 
   constructor(private firestore: AngularFirestore) { }
 
@@ -25,8 +25,12 @@ export class BlogService {
     return this.firestore.collection(this.collectionName).doc(id).delete();
   }
 
-  public updateBloc(data){
-    return this.firestore.doc(this.collectionName).update(data);
+  public updateBlog(data){
+    return this.firestore.collection(this.collectionName).doc(data.id).update(data);
+  }
+
+  public getBlogById(id){
+    return this.firestore.collection(this.collectionName).doc(id).snapshotChanges();
   }
 
 }

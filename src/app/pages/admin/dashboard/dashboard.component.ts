@@ -14,7 +14,8 @@ export class DashboardComponent implements OnInit {
       // console.log(wow.length);
       // console.log(wow);
       this.count=wow.length
-    })
+    });
+    this.blogs.selectedBlog.next(null);
    }
 
   ngOnInit(): void {

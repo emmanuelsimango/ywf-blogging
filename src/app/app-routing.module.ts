@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProgramsComponent } from './pages/programs/programs.component';
 import { PathFindersComponent } from './pages/path-finders/path-finders.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { BlogOneComponent } from './pages/blog-one/blog-one.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path:'blog',
     component: BlogComponent,
+  },
+  {
+    path: 'blog-one',
+    component: BlogOneComponent,
   },
   {
     path:'admin',

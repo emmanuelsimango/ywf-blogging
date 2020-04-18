@@ -1,1 +1,65 @@
-<p>blog-one works!</p>
+<app-header *ngIf="selectedGuy" [title]="title"></app-header>
+<section class="py-5">
+    <div class="container" *ngIf="selectedGuy">
+        <div class="row text-center ">
+            <p class="golden-text">
+                blog works!
+            </p>
+        </div>
+        <div class="row py-5" >
+            <div class="col-sm-12 col-md-3">
+            <img src="assets/img/avatas/pp.jfif" class="img rounded-circle img-thumbnail img-fluid border-danger" style="max-height: 10rem;"
+            alt="">
+            </div>
+            <div class="col-sm-12 col-md-9">
+            <h3 class="font-weight-bold text-shadow">
+                Ronald <span> Murerekwa</span>
+            </h3>
+            <p class="text-dark">
+                {{selectedGuy.content}}
+            </p>
+            <span>{{selectedGuy.timeCreated | date}}</span>
+            </div>
+        </div>
+        <hr>
+        <h3 class="font-weight-bold text-shadow">
+            <span> Comments</span>
+        </h3>
+        <div class="row py-5" *ngFor="let item of selectedGuy.comments; let i=index">
+        <div class="col-sm-12 col-md-9">
+            <h3 class="font-weight-bold text-shadow">
+            {{item.name}}
+            </h3>
+            <p class="text-dark">
+                {{item.details}}
+            </p>
+            <span>{{item.dateCommented | date}}</span>
+        </div>
+    </div>
+  </div>
+        <!-- Testing shiiiit yangu -->
+        <section class=" d-flex justify-content-center align-items-center p-3">
+
+
+            <div class="col-sm-10 col-md-5 text-center form border border-light p-5">
+            
+              <h3 class="font-weight-bold">Comment <span> Blog</span></h3>
+              
+              <!-- Title -->
+              <input [(ngModel)]="comment.name" type="text" class="form-control mb-4" placeholder="Name" #userName required>
+            
+              <!-- Content -->
+              <textarea [(ngModel)]="comment.details" name="details" class="form-control mb-4"  cols="30" rows="10" placeholder="Details"></textarea>
+            
+              <!-- Submit button -->
+              <button class="btn btn-dark btn-block my-4" type="button"  (click)="submitComment()">Comment</button>
+            
+             
+              </div>
+            
+            
+              </section>
+            
+        
+</section>
+

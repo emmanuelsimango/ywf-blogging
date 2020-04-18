@@ -16,23 +16,13 @@
                 Ronald <span> Murerekwa</span>
             </h3>
             <p class="text-dark">
-                {{item.payload.doc.data().content}}
+                {{item.payload.doc.data().content | slice:0:100}} <span><a class="btn btn-primary" (click)="readMore(item)">Read more</a></span>
             </p>
+            <span>{{item.payload.doc.data().timeCreated | date}}</span>
             </div>
+            <hr>
         </div>
-        <hr>
-        <h3 class="font-weight-bold text-shadow">
-            <span> Comments</span>
-        </h3>
-        <div class="row py-5">
-        <div class="col-sm-12 col-md-9">
-            <h3 class="font-weight-bold text-shadow">
-            Tanaka Ryan<span> Murerekwa</span>
-            </h3>
-            <p class="text-dark">
-            BSc Agronomy student at the Midlands state university his skills are believed to be sufficient in sustaining the agricultural initiatives as he volunteered to assist the youths in farming communities and rural areas by the organization.   </p>
-        </div>
+        
     </div>
-  </div>
 </section>
 

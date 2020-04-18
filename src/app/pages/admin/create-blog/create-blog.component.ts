@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class CreateBlogComponent implements OnInit {
 
-  blog:{title:string, content:string,comments:[],timeCreated} = {
+  blog:{title:string, content:string,comments:[],timeCreated,id?,dateUpdated?} = {
     title: '',
     content: '',
     comments:[],
@@ -18,7 +18,8 @@ export class CreateBlogComponent implements OnInit {
   constructor(private blogService:BlogService,private router: Router,) { 
     blogService.selectedBlog.subscribe(data=>{
       if(data){
-        this.blog.title=data.payload.doc.data().title;
+        this.blog=data.payload.doc.data();
+        this.blog.id = data.payload.doc.id;
       }
     })
   }
@@ -28,13 +29,24 @@ export class CreateBlogComponent implements OnInit {
 
   save(){
     ///put loader here
-    this.blog.timeCreated = Date.now();
-    this.blogService.addBlog(this.blog).then(data=>{
-      //stop it in here
+    if(this.blog.id){
+      this.blog.dateUpdated = Date.now();
+      this.blogService.updateBlog(this.blog).then(data=>{
+        //stop it in here
 
-      alert('done');
-      this.router.navigateByUrl('/admin/admin-blog');
-    });
+        alert('done');
+        this.router.navigateByUrl('/admin/admin-blog');
+      });
+    }else{
+      this.blog.timeCreated = Date.now();
+      this.blogService.addBlog(this.blog).then(data=>{
+        //stop it in here
+
+        alert('done');
+        this.router.navigateByUrl('/admin/admin-blog');
+      });
+    }
+    
   }
 
 }
