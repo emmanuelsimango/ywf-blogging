@@ -6,6 +6,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { AdminBlogComponent } from './admin-blog/admin-blog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from 'src/app/service/security/auth.guard';
+import { ListUsersComponent } from './list-users/list-users.component';
+import { CreateBlogComponent } from './create-blog/create-blog.component';
 
 
 const routes: Routes = [
@@ -34,6 +36,16 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'users',
+    component: ListUsersComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'admin-create-blog',
+    component: CreateBlogComponent,
+    canActivate: [AuthGuard],
   }
 ];
 

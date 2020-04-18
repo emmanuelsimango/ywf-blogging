@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 export class BlogService {
 
   private collectionName:string = 'blog-posts';
+  public selectedBlog:Observable<any> = new Observable(null);
+
   constructor(private firestore: AngularFirestore) { }
 
   public getAllBlogs():Observable<DocumentChangeAction<unknown>[]>{

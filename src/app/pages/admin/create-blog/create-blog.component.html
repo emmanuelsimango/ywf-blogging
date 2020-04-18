@@ -1,0 +1,24 @@
+      <!-- Testing shiiiit yangu -->
+      <section class=" d-flex justify-content-center align-items-center p-3">
+
+
+      <div class="col-sm-10 col-md-5 text-center form border border-light p-5">
+      
+        <h3 class="font-weight-bold">Create <span> Blog</span></h3>
+        
+        <!-- Title -->
+        <input [(ngModel)]="blog.title" type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Title" #userName required>
+      
+        <!-- Content -->
+        <textarea [(ngModel)]="blog.content" name="content" class="form-control mb-4"  cols="30" rows="10" placeholder="Content"></textarea>
+      
+        <!-- Submit button -->
+        <button class="btn btn-dark btn-block my-4" type="button"  (click)="save()">Create</button>
+      
+       
+        </div>
+      
+      
+        </section>
+      
+  

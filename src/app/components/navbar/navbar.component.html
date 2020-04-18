@@ -43,10 +43,20 @@
       </li>
       <ng-container *ngIf="user; else elseTemplate">
         <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/admin-blog">Admin Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/users">Users</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" (click)="authService.SignOut()">Logout</a>
         </li>
       </ng-container>
       <ng-template #elseTemplate>
+        
         <li class="nav-item">
           <a class="nav-link" routerLink="/admin">Login/Signin</a>
         </li>
@@ -59,5 +69,4 @@
 </div>
 </nav>
 <!--/.Navbar -->
-
 </nav>

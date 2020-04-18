@@ -8,14 +8,17 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ComponentsModule } from 'src/app/components/components.module';
-
+import { ListUsersComponent } from './list-users/list-users.component';
+import { CreateBlogComponent } from './create-blog/create-blog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [LoginComponent, AdminBlogComponent, ForgotPasswordComponent, SignUpComponent, DashboardComponent],
+  declarations: [LoginComponent, AdminBlogComponent, ForgotPasswordComponent, SignUpComponent, DashboardComponent, ListUsersComponent, CreateBlogComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

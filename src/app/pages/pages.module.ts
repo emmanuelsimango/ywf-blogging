@@ -6,7 +6,7 @@ import { ProgramsComponent } from './programs/programs.component';
 import { PathFindersComponent } from './path-finders/path-finders.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogOneComponent } from './blog-one/blog-one.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import { BlogOneComponent } from './blog-one/blog-one.component';
   imports: [
     CommonModule,
     ComponentsModule,
-    
+    FormsModule,
   ],
   exports: [
     HomeComponent

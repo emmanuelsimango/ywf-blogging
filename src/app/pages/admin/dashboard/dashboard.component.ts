@@ -11,9 +11,9 @@ export class DashboardComponent implements OnInit {
   count=0;
   constructor(private blogs:BlogService) {
     blogs.getAllBlogs().subscribe(wow=>{
-      console.log(wow.length);
-      console.log(wow);
-      
+      // console.log(wow.length);
+      // console.log(wow);
+      this.count=wow.length
     })
    }
 
